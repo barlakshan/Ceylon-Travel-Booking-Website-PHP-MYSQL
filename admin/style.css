@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 240px;
+    background: #008000;
+    transition: all 0.5s ease;
+}
+.sidebar .active{
+    width: 60px;
+}
+.sidebar .logo-details{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .logo-details a{
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    min-width: 60px;
+    text-align: center;
+}
+.sidebar .nav-links{
+    margin-top: 16px;
+
+}
+.sidebar .nav-links li{
+    height: 60px;
+    width: 100%;
+    list-style: none;
+
+}
+.sidebar .nav-links li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.sidebar .nav-links li a:hover{
+    background: #133602;
+}
+.sidebar .nav-links .act{
+    background: #133602;
+}
+
+.sidebar .nav-links li a i{
+    min-width: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.sidebar .nav-links li a .link_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* Home contant */
+.home-section{
+    background: #f5f5f5;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.home-section nav{
+    position: fixed;
+    width: calc(100% - 240px);
+    left: 240px;
+    height: 80px;
+    background: #fff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+
+}
+.sidebar.active ~ .home-section nav {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.home-section nav .sidebar-button{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+.home-section nav .sidebar-button i{
+    font-size: 35px;
+    margin-right: 10px;
+}
+/* .home-section nav .sidebar-button .dashboard{
+    font-size: 30px;
+
+} */
+.home-section nav .search-box{
+    height: 50px;
+    width: 550px;
+    margin: 0 20px;
+}
+nav .search-box input{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 0px 15px;
+    font-size: 17px;
+    background: #F5F6FA; 
+    border: 2px solid #efeef1;
+    outline: none;
+}
+nav .search-box .bx-search-alt-2{
+    position: absolute;
+    right: 381px;
+    top: 2.5rem;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    background: #2697FF;
+    border-radius: 6px;
+    color: #fff; 
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+}
+.home-section nav .profile-details{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    min-width: 190px;
+    background: #F5F6FA;
+    border: 2px solid #efeef1;
+    border-radius: 6px;
+    padding: 0 15px 0 20px;
+}
+nav .profile-details .bxs-user-circle{
+    margin: 0.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+nav .profile-details .admin-name{
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+nav .profile-details i{
+    color: #333;
+    font-size: 25px;
+}
+.home-section .home-content{
+    position: relative;
+    padding-top: 104px;
+}
+.home-content .overview-boxes .box{
+    padding: 15px 14px;
+    background: #fff;
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+}
+.home-content .overview-boxes .box_topic{
+    font-size: 20px;
+    font-weight: 500;
+}
+.home-content .overview-boxes .number{
+    display: inline-block;
+    font-size: 35px;
+    margin-top: -6px;
+    font-weight: 500;
+}
+.home-content .overview-boxes .indicator{
+    display: flex;
+    align-items: center;
+}
+.overview-boxes .indicator i{
+    height: 20px;
+    width: 20px;
+    background: #8FDACB;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 5px;
+}
+.overview-boxes .indicator .text{
+    font-size:12px;
+}
+.overview-boxes .box .cart{
+    font-size: 32px;
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    background: #cce5ff;
+    color: #66b0ff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+} 
+.overview-boxes .box .cart.two{
+    background: #c0f2d8;
+    color: #049b4c;
+}
+.overview-boxes .box .cart.three{
+    background: #ffc233;
+    color: #ffe8b3;
+}
+.overview-boxes .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.home-content .overview-boxes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.second-box{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 40px 40px 40px;
+}
+.second-box div{
+    flex: 1 !important;
+}
+.search-box .recent-bookig .box{
+    padding: 15px 14px;
+    background: #fff;
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+}
+.search-box .admin_details .box{
+    padding: 15px 14px;
+    background: #fff;
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+}
+.admin-box{
+    margin: 1rem;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+}
+.admin-box img{
+    width: 50%;
+}
+.admin-box li{
+    list-style: none;
+}
+.admin-box span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.second-box p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.inq-box{
+    padding: 1rem;
+    background: #fff;
+    border-radius: 6px;
+}
+.profile-boxes{
+    position: relative;
+    padding-top: 104px;
+}
+.profile-boxes .box_margin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 400px) {
+    .sidebar{
+      width: 0;
+    }
+    .sidebar.active{
+      width: 60px;
+    }
+    .home-section{
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.active ~ .home-section{
+      left: 60px;
+      width: calc(100% - 60px);
+    }
+    .home-section nav{
+      width: 100%;
+      left: 0;
+    }
+    .sidebar.active ~ .home-section nav{
+      left: 60px;
+      width: calc(100% - 60px);
+    }
+  }
